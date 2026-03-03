@@ -26,24 +26,8 @@ main {
    HEADER (Encabezado)
    ========================================= */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-/* Lado izquierdo: Logo */
-.left-side {
-    display: flex;
-    align-items: center;
-    flex: 0;
-}
-
 .logo img {
-    height: 45px;
+    height: 55px; /* Un poco más grande para que se vea mejor en la esquina */
     display: block;
 }
 
@@ -51,30 +35,12 @@ main {
 .center {
     display: flex;
     justify-content: center;
-    flex: 2;
-    /* Espacio prioritario para centrar */
+    flex: 2; /* Sigue teniendo prioridad para mantenerse al medio */
 }
 
 .nav-links {
     display: flex;
     gap: 25px;
-}
-
-.site-header {
-    background-color: #fff;
-    /* Asegura el fondo blanco */
-    width: 100%;
-    position: sticky;
-    /* O fixed, según prefieras */
-    top: 0;
-    z-index: 1000;
-
-    /* LA LÍNEA DE SEPARACIÓN */
-    border-bottom: 1px solid #f0f0f0;
-    /* Color gris muy suave como en la foto */
-
-    /* Opcional: una sombra muy ligera para dar profundidad */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
 }
 
 .site-header .container {
@@ -87,14 +53,6 @@ main {
     /* Ajusta el alto del header aquí */
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-size: 15px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
 .nav-links a.active {
     color: #1A3878;
     font-weight: 700;
@@ -104,8 +62,9 @@ main {
 .right-group {
     display: flex;
     align-items: center;
+    flex: 1; /* Añadido para equilibrar con el lado izquierdo */
+    justify-content: flex-end;
 }
-
 .btn-reg {
     background-color: #1A3878;
     color: white;
@@ -129,11 +88,6 @@ main {
     font-size: 14px;
     transition: 0.3s;
 }
-
-.btn-login:hover {
-    background-color: #f0f4ff;
-}
-
 
 /* =========================================
    FOOTER (Pie de página)
@@ -193,13 +147,6 @@ h3 {
     line-height: 1;
 }
 
-/* Listas y Enlaces */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 ul li {
     margin-bottom: 10px;
 }
@@ -211,31 +158,11 @@ ul li {
     transition: 0.3s;
 }
 
-.pie-pagina a:hover {
-    color: #3498db;
-}
-
 /* Redes Sociales e Iconos */
-.redes-iconos {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
 .redes-iconos img {
     width: 24px;
     filter: brightness(0) invert(1);
     transition: 0.3s;
-}
-
-.redes-iconos img:hover {
-    transform: translateY(-3px);
-    filter: none;
-}
-
-.redes-lista .texto {
-    margin-top: 0;
-    padding-top: 0;
 }
 
 /* =========================================
@@ -796,43 +723,7 @@ ul li {
     font-size: 32px;
     color: #051221;
     margin-bottom: 10px;
-}
-
-.inicio-intro p {
-    color: #666;
-    font-size: 16px;
-}
-
-.inicio-servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 40px auto 80px;
-    padding: 0 20px;
-}
-
-/* Tarjetas de Servicios en Inicio */
-.tarjeta-servicio-inicio {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-servicio-inicio:hover {
-    transform: translateY(-5px);
-}
-
-.icono-servicio {
-    display: inline-block;
-    background: #f0f4f8;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-weight: bold; 
 }
 
 /* =========================================
