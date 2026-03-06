@@ -159,10 +159,33 @@ ul li {
 }
 
 /* Redes Sociales e Iconos */
+/* Contenedor que agrupa el texto y los iconos */
+.redes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre el texto descriptivo y los iconos */
+}
+
+/* Contenedor específico de los iconos */
+.redes-iconos {
+    display: flex;       /* Alinea los iconos en fila */
+    flex-direction: row; /* Asegura que vayan de izquierda a derecha */
+    gap: 20px;           /* Espacio horizontal entre cada logo */
+    align-items: center;
+    margin-top: 5px;
+}
+
 .redes-iconos img {
     width: 24px;
-    filter: brightness(0) invert(1);
-    transition: 0.3s;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Los hace blancos */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto opcional para que se sientan vivos al pasar el ratón */
+.redes-iconos a:hover img {
+    transform: scale(1.2);
+    filter: brightness(0) invert(0.8); /* Se vuelven un pelín grises al pasar el ratón */
 }
 
 /* =========================================

@@ -130,9 +130,11 @@
                         </div>
                         <h2 class="text-gray-900 text-3xl font-black">Entrenador Personal</h2>
                         <p class="text-lg">Planes 100% adaptados a tus metas monitorizando tu progreso.</p>
-                        <button class="flex w-fit min-w-[200px] items-center justify-center rounded-lg h-12 px-6 bg-[#1A3878] text-white font-bold mt-4">
-                            Solicitar Sesión de Valoración
-                        </button>
+{{-- Busca este botón cerca de la línea 106 de tu archivo servicios --}}
+<button onclick="window.location.href='{{ route('valoracion') }}'" 
+    class="flex w-fit min-w-[200px] items-center justify-center rounded-lg h-12 px-6 bg-[#1A3878] text-white font-bold mt-4">
+    Solicitar Sesión de Valoración
+</button>
                     </div>
                 </section>
 
