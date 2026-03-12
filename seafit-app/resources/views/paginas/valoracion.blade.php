@@ -3,6 +3,14 @@
 @section('titulo', 'Solicita tu Sesión de Valoración - SeaFit')
 
 @section('contenido')
+{{-- Mensaje de éxito --}}
+@if (session('exito'))
+    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-xl mb-6 shadow-sm flex items-center">
+        <span class="material-symbols-outlined mr-2">check_circle</span>
+        <p class="font-bold">{{ session('exito') }}</p>
+    </div>
+@endif
+
 <div class="bg-[#F8F8F8] min-h-screen py-16 flex justify-center items-center font-display">
     <div class="bg-white p-12 rounded-[2.5rem] shadow-2xl border border-gray-100 max-w-2xl w-full text-center">
         

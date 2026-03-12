@@ -5,6 +5,8 @@ use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\ValoracionController;
+
 
 // --- INICIO ---
 Route::get('/', function () {
@@ -50,3 +52,7 @@ Route::middleware(['auth'])->group(function () {
     
     Route::post('/reservar/{id}', [ReservaController::class, 'reservar'])->name('clase.reservar');
 });
+
+
+// Esta ruta es la que procesará el botón de valoracion
+Route::post('/valoracion', [ValoracionController::class, 'enviar'])->name('valoracion.enviar');
